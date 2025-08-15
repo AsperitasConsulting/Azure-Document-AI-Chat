@@ -1,4 +1,4 @@
-Create Terraform code to provision the following Azure resources for a “doc-qa” application:
+# Create Terraform code to provision the following Azure resources for a “doc-qa” application:
 
 - Resource Group: doc-qa-rg (region: East US)
 - Azure Storage Account: aspdocqa (Standard LRS)
@@ -10,7 +10,7 @@ Create Terraform code to provision the following Azure resources for a “doc-qa
   - Application setting: OPENAI_API_KEY
 - App Service Plan for the Function App
 
-Terraform specifics:
+# Terraform details:
 - Configure Terraform to use an existing Azure storage account backend with the following specifics:
     - resource_group_name  = "Terraform-Backend-State-RG"
     - storage_account_name = "aspterraformstate"
@@ -28,7 +28,7 @@ Terraform specifics:
     - AZURE_SUBSCRIPTION_ID
     - AZURE_TENANT_ID
 
-Create GitHub workflows to run Terraform infrastructure
+# Create GitHub workflows to run Terraform infrastructure
 - Workflows are executed  on dispatch
 - Provide users option to specify the Terraform version (Defaulting to 1.12.2)
 - Provide users option to select the environment deployed (default: dev)
