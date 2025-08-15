@@ -9,6 +9,8 @@ Create Terraform code to provision the following Azure resources for a “doc-qa
   - Storage account for function runtime files
   - Application setting: OPENAI_API_KEY
 - App Service Plan for the Function App
+
+Terraform specifics:
 - Configure Terraform to use an existing Azure storage account backend with the following specifics:
     - resource_group_name  = "Terraform-Backend-State-RG"
     - storage_account_name = "aspterraformstate"
@@ -17,7 +19,7 @@ Create Terraform code to provision the following Azure resources for a “doc-qa
 - I expect multiple environments. dev today, but I expect to add qa and prod later
 - Use best practices for making arguments variables. Record values expected to change between environments in .tfvars files. 
 - Separate Terraform projects for the storage account and linux app reduce the blast radius of infrasructure code.
-- Each Terraform project should have the ability to support multiple environments. My intention is to test infrastrucvture code in dev and use the exact same automation for higher environments. I don't want separate Terraform projects for separate environments.
+- Each Terraform project should have the ability to support multiple environments. My intention is to test infrastructure code in dev and use the exact same automation for higher environments. I don't want separate Terraform projects for separate environments.
 - Place all Terraform projects in folder infrastructure
 - Add init output and any other temporary files to the .gitignore so I don't check them in
 - terraform is installed locally and Azure credentials are in the environment variables below. perform an init and plan locally after it's written
